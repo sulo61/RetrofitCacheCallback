@@ -57,3 +57,22 @@ retrofit.create(RandomService.class).getRandomNumber()
     }
   });
 ```
+
+To manually edit cache:
+
+CacheCallbackPrefs.java
+
+save
+```java
+void saveToCache(Context context, String url, String json)
+```
+
+read
+```java
+String readFromCache(Context context, String url)
+```
+
+remove
+```java
+void removeAllFromCache(Context context)
+```
