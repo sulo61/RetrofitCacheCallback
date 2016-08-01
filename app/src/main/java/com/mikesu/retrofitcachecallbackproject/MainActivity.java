@@ -22,14 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private Retrofit retrofit;
   private Button btn;
   private TextView value;
-  private boolean lock;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
-    lock = false;
 
     btn = (Button) findViewById(R.id.btn);
     value = (TextView) findViewById(R.id.value);
