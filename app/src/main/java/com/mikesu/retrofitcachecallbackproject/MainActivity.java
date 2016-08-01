@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   @Override
   public void onClick(View view) {
-    if (!lock) {
+    if (btn.isEnabled()) {
       btn.setEnabled(false);
 
       retrofit.create(RandomService.class).getRandomNumber()
