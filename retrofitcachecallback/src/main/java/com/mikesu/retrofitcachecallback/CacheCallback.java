@@ -41,7 +41,7 @@ public abstract class CacheCallback<T> implements Callback<T> {
   public void onResponse(Call<T> call, Response<T> response) {
     if (isSuccess(response)) {
       if (useCache) {
-        SharedPrefsUtils.saveToCache(context, call.request().url().toString(), gson.toJson(response.body()));
+        CacheCallbackPrefs.saveToCache(context, call.request().url().toString(), gson.toJson(response.body()));
       }
       success(response.body(), false);
     } else {
@@ -69,7 +69,7 @@ public abstract class CacheCallback<T> implements Callback<T> {
     if (useCache && throwable instanceof UnknownHostException) {
       T body;
       try {
-        body = (T) gson.fromJson(SharedPrefsUtils.readFromCache(context, call.request().url().toString()), bodyClass);
+        body = (T) gson.fromJson(CacheCallbackPrefs.readFromCache(context, call.request().url().toString()), bodyClass);
       } catch (Exception e) {
         failure(call, throwable);
         Log.e(TAG, "onFailure", e);

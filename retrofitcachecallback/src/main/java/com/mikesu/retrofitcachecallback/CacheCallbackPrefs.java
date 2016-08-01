@@ -9,9 +9,9 @@ import java.util.Map;
  * Created by MikeSu on 01/08/16.
  * www.michalsulek.pl
  */
-public class SharedPrefsUtils {
+public class CacheCallbackPrefs {
 
-  private static final String TAG = SharedPrefsUtils.class.getName();
+  private static final String TAG = CacheCallbackPrefs.class.getName();
 
   private static final String PREF_CACHE_CALLBACK = "cacheCallback";
 
