@@ -1,6 +1,6 @@
 # RetrofitCacheCallback
 
-CacheCallback implements Retrofit Callback. Use it instead of Retrofit default callback.
+CacheCallback implements Retrofit Callback and using SharedPreferences to store data. Use it instead of Retrofit default callback.
 
 
 
